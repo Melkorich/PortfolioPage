@@ -19,8 +19,20 @@ $(function(){
 });
 
 //preloader
-const loader = document.getElementById('preloader');
+// const loader = document.getElementById('preloader');
 
-window.addEventListener('load', function() {
-  loader.style.display = 'none';
-})
+// window.addEventListener('load', function() {
+//   loader.style.display = 'none';
+// })
+
+//preloader with post-effect
+document.body.onload = function () {
+
+  setTimeout(function () {
+
+    let preloader = document.getElementById('preloader');
+    if (!preloader.classList.contains('hidden')) {
+      preloader.classList.add('hidden');
+    }
+  }, 600);
+}
