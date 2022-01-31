@@ -23,9 +23,6 @@
 
   &__btn-language {
     display: inline-block;
-    background-color: transparent;
-    border: transparent;
-    padding: 0;
     font-size: 20px;
     line-height: 1.15;
     @extend %roboto-300;
@@ -130,8 +127,11 @@
       padding-top: 15px;
     }
 
-    @include maxw($xs) {
+    @include maxw($sm) {
       height: 350px;
+    }
+
+    @include maxw($xs) {
       min-width: 400px;
       width: 400px;
     }
