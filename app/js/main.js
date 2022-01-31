@@ -16,6 +16,8 @@ $(function(){
           $("html, body").animate({scrollTop: $(_href).offset().top+"px"}, 1000);
           return false;
   });
+
+  $('.wrapper').addClass('active');
 });
 
 //preloader
