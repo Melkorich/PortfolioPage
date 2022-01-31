@@ -1,0 +1,61 @@
+.menu {
+
+  &__list {
+    display: flex;
+    position: relative;
+    padding-right: 196px;
+
+    @include maxw($md) {
+      flex-direction: column;
+      padding-right: 0;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      background-image: url('../../images/header/line.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 159px;
+      height: 2px;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      z-index: 5;
+
+      @include maxw($md) {
+        top: 110%;
+        left: 0;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-right: 38px;
+    }
+
+    @include maxw($md) {
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__link {
+    @extend %roboto-300;
+    font-size: 20px;
+    line-height: 1.15;
+    color: var(--color-text);
+    outline: transparent;
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: var(--color-accent);
+    }
+  }
+}

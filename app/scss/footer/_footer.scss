@@ -1,0 +1,39 @@
+.footer {
+  padding: 20px 0 48px;
+  background-color: #1c1c1c;
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &__inner {
+    position: relative;
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+
+    @include maxw($xs) {
+      justify-content: start;
+    }
+  }
+
+  .social__item {
+
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+  }
+
+  &__copyrights {
+    text-align: center;
+    font-size: 17px;
+    line-height: 1.17;
+    color: var(--color-main);
+
+    @include maxw($xs) {
+      text-align: left;
+    }
+  }
+}

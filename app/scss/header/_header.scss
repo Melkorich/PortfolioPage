@@ -1,0 +1,169 @@
+.header {
+  background-color: var(--color-bg);
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position: center;
+  overflow: hidden;
+
+  &__top {
+    padding: 68px 0;
+
+    @include maxw ($md) {
+     padding: 25px 0;
+    }
+  }
+
+  &__top-inner {
+    @include flexb();
+
+    @include maxw ($md) {
+      display: block;
+    }
+  }
+
+  &__btn-language {
+    display: inline-block;
+    background-color: transparent;
+    border: transparent;
+    padding: 0;
+    font-size: 20px;
+    line-height: 1.15;
+    @extend %roboto-300;
+    color: var(--color-text);
+    outline: none;
+    transition: color 0.3s;
+
+    @include maxw ($md) {
+      margin-bottom: 20px;
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: var(--color-accent);
+    }
+  }
+
+  &__content {
+    padding-top: 56px;
+
+    @include maxw($xs) {
+      padding-top: 30px;
+    }
+  }
+
+  &__content-inner {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+
+    @include maxw($md) {
+      flex-direction: column;
+    }
+  }
+
+  &__aside {
+    position: absolute;
+    right: 0;
+    top:40%;
+    transform: translateY(-60%);
+  }
+
+  &__info {
+    max-width: 445px;
+    width: 100%;
+    margin-right: 60px;
+    margin-top: 100px;
+    position: relative;
+  }
+
+  &__name {
+    font-size: 26px;
+    @extend %roboto-300;
+    line-height: 1.15;
+    font-style: italic;
+    margin: 100px 0 8px 0;
+    display: block;
+
+    @include maxw($xl) {
+      margin: 0 0 8px 0;
+    }
+  }
+
+  &__title {
+    font-size: 65px;
+    line-height: 1.12;
+    @extend %pt-sans-400;
+    color: var(--color-accent);
+    margin-bottom: 165px;
+
+    @include maxw($xl) {
+      font-size: 50px;
+    }
+
+    @include maxw($lg) {
+      margin-bottom: 0;
+      font-size: 45px;
+    }
+
+    @include maxw($xs) {
+      font-size: 37px;
+    }
+  } 
+
+  &__subtitle {
+    color: rgba(176, 166, 114, 0.5);
+  } 
+
+  &__image {
+    position: relative;
+    min-width: 496px;
+    height: 590px;
+
+    @include maxw($lg) {
+      height:455px;
+      min-width: 440px;
+    }
+
+    @include maxw($md) {
+      padding-top: 15px;
+    }
+
+    @include maxw($xs) {
+      height: 350px;
+      min-width: 400px;
+      width: 400px;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      background-image:url('../images/header/circle.png');
+      top: -15px;
+      left: -200px;
+      width: 609px;
+      height: 584px;
+      background-repeat:no-repeat;
+      background-size:cover;
+      z-index: -1;
+
+      @include maxw($md) {
+        top: 20px;
+        left: -20px;
+        height: 450px;
+        background-size:contain;
+      }
+
+      @include maxw($xs) {
+        width: 400px;
+      }
+    }
+
+    .header__img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}

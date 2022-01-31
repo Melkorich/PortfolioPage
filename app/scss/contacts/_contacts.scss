@@ -1,0 +1,142 @@
+.contacts {
+  padding: 65px 0;
+  background-color: #1c1c1c;
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include maxw($xs) {
+    padding: 40px 0;
+  } 
+
+  &__title {
+    margin-bottom: 75px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+
+    @include maxw($xl) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__info {
+    max-width: 573px;
+    width: 100%;
+    margin: auto 30px auto 0;
+    border-radius: 0 30px 30px 0;
+    border-left: 1px solid var(--color-accent);
+
+    @include maxw($xl) {
+      max-width: 100%;
+      border-left: none;
+      margin: 0 0 30px 0;
+      border-radius: 0;
+    }
+  }
+}
+
+.info {
+  background-color: #1c1c1c;
+  padding: 46px 10px 46px 82px;
+
+  @include maxw($md) {
+    padding: 40px 0 40px 30px;
+  }
+
+  @include maxw($xs) {
+    padding: 40px 0 40px 5px;
+  }
+  
+
+  &__title {
+    color: var(--color-accent);
+    @extend %pt-sans-400;
+    font-size: 40px;
+    line-height: 1.125;
+    margin-bottom: 35px;
+    padding-left: 48px;
+
+    @include maxw($xs) {
+      font-size: 30px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    padding-left: 48px;
+    position: relative;
+
+    @include maxw($xs) {
+      padding-left: 30px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 8px;
+      left: 0;
+      width: 25px;
+      height: 25px;
+      background-repeat:no-repeat;
+      background-size:contain;
+
+      @include maxw($xs) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  &__item--mail {
+    &::before {
+      background-image:url('../images/contacts/mail.svg');
+    }
+  }
+
+  &__item--phone{
+    &::before {
+      background-image:url('../images/contacts/phone.svg');
+      top: 5px;
+    }
+  }
+
+  &__item--telegram {
+    &::before {
+      background-image:url('../images/contacts/telegram.svg');
+    } 
+  }
+
+  &__link {
+    font-size: 30px;
+    line-height: 1.13;
+    color: var(--color-main);
+    outline: none;
+    transition: color 0.3s;
+
+    @include maxw($sm) {
+      font-size: 25px;
+    }
+
+    @include maxw($xs) {
+      font-size: 18px;
+    }
+
+    &:focus,
+    &:hover, 
+    &:active {
+      color: var(--color-white);
+    }
+  }
+}

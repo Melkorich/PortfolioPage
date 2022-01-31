@@ -1,0 +1,87 @@
+.form {
+  width: 472px;
+
+  @include maxw($sm) {
+    width: 100%;
+  }
+ 
+  &__input {
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid var(--color-accent);
+    border-radius: 30px;
+    padding: 18px 30px;
+    font-size: 25px;
+    line-height: 1.16;
+    color:var(--color-main);
+    margin-bottom: 40px;
+
+    @include maxw($xs) {
+      font-size: 20px;
+    }
+
+    &::placeholder {
+      font-size: 25px;
+      line-height: 1.16;
+      color:var(--color-main);
+
+      @include maxw($xs) {
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__textarea {
+    padding: 18px 30px;
+    font-size: 25px;
+    line-height: 1.16;
+    color:var(--color-main);
+    margin-bottom: 60px;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid var(--color-accent);
+    border-radius: 30px;
+    min-height: 157px;
+    resize: none;
+
+    @include maxw($xs) {
+      font-size: 20px;
+    }
+
+    &::placeholder {
+      font-size: 25px;
+      line-height: 1.16;
+      color:var(--color-main);
+
+      @include maxw($xs) {
+        font-size: 20px;
+      }
+    }
+  } 
+
+  &__btn {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--color-accent);
+    border-radius: 30px;
+    font-size: 30px;
+    line-height: 1.16;
+    text-align: center;
+    outline: none;
+    border: 1px solid transparent;
+    color: #1c1c1c;
+    transition: color 0.3s;
+
+    @include maxw($xs) {
+      font-size: 25px;
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      color:var(--color-white);
+    }
+  }
+
+}

@@ -1,0 +1,45 @@
+//main sceren sizes
+
+$xxl: 1400px;
+$xl: 1200px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
+$xs: 480px;
+$xsm: 320px;
+
+//main colors
+:root {
+  --color-accent: #B0A672;
+  --color-main:#B0B0B0;
+  --color-text: #717171;
+  --color-highlighted:#9f9f9f;
+  --color-bg:#151515;
+  --color-white: #fff;
+}
+
+//fonts
+%roboto-400 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+%roboto-300 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+%pt-sans-400 {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-weight: 400;
+}
+
+// fansybox error
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}

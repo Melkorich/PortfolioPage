@@ -1,0 +1,29 @@
+@import 'fonts';
+@import 'vars';
+@import 'mixin';
+@import 'reset';
+@import 'libs';
+@import 'global';
+
+
+@import 'header/header';
+@import 'header/menu';
+@import 'header/social';
+
+//about
+@import 'about/about';
+
+//portfolio
+@import 'portfolio/portfolio';
+
+//contacts
+@import 'contacts/contacts';
+@import 'contacts/form';
+
+
+//footer
+@import 'footer/footer';
+
+
+@import 'media'; 
+ 
