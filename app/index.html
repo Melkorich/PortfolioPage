@@ -205,7 +205,7 @@
           </h2>
           <ul class="portfolio__items">
             <li class="portfolio__item">
-              <a class="portfolio__link" href="#">
+              <a class="portfolio__link" href="https://melkorich.github.io/Bixcoin/app/index.html" target="_blank">
                 <img class="portfolio__img" src="images/portfolio/bixcoin.png" alt="сайт криптовалюты бикскоин">
                 <span class="portfolio__description">
                  Сайт криптовалюты
@@ -213,7 +213,7 @@
               </a>
             </li>
             <li class="portfolio__item">
-              <a class="portfolio__link" href="#">
+              <a class="portfolio__link" href="https://melkorich.github.io/Marshall/app/index.html" target="_blank">
                 <img class="portfolio__img" src="images/portfolio/marshall.png" alt="онлайн магазин наушников">
                 <span class="portfolio__description">
                   Магазин наушников
@@ -221,7 +221,7 @@
               </a>
             </li>
             <li class="portfolio__item">
-              <a class="portfolio__link" href="#">
+              <a class="portfolio__link" href="https://melkorich.github.io/Transflash/app/index.html" target="_blank">
                 <img class="portfolio__img" src="images/portfolio/transflash.png" alt="Сайт компании перевозок">
                 <span class="portfolio__description">
                   Сайт компании перевозок
@@ -229,7 +229,7 @@
               </a>
             </li>
             <li class="portfolio__item">
-              <a class="portfolio__link" href="#">
+              <a class="portfolio__link" href="https://melkorich.github.io/Taylor-Swift/app/index.html" target="_blank">
                 <img class="portfolio__img" src="images/portfolio/taylor-swift.png" alt="Сайт посвященный певице Тейлор Свифт">
                 <span class="portfolio__description">
                   Многостраничный сайт о знаменитости
@@ -237,7 +237,7 @@
               </a>
             </li>
             <li class="portfolio__item">
-              <a class="portfolio__link" href="#">
+              <a class="portfolio__link" href="https://melkorich.github.io/Barberstore/app/index.html" target="_blank">
                 <img class="portfolio__img" src="images/portfolio/barberstore.png" alt="Онлайн магазин Барберсторе">
                 <span class="portfolio__description">
                   Онлайн магазин Barberstore
@@ -245,7 +245,7 @@
               </a>
             </li>
             <li class="portfolio__item">
-              <a class="portfolio__link" href="#">
+              <a class="portfolio__link" href="https://melkorich.github.io/Ireland/app/index.html" target="_blank">
                 <img class="portfolio__img" src="images/portfolio/ireland.png" alt="Сайт посвященный путешествию по Ирландии">
                 <span class="portfolio__description">
                   Страничка об Ирландии
@@ -253,7 +253,7 @@
               </a>
             </li>
             <li class="portfolio__item">
-              <a class="portfolio__link" href="#">
+              <a class="portfolio__link" href="https://melkorich.github.io/Coffeman/app/index.html" target="_blank">
                 <img class="portfolio__img" src="images/portfolio/coffee.png" alt="сайт-лендинг о кофе">
                 <span class="portfolio__description">
                   Для любителей кофе
@@ -290,9 +290,15 @@
                 </li>
               </ul> 
             </div>
-            <form class="contacts__form form" action="#">
-             <input class="form__input" type="email" name="mail" placeholder="Ваш E-mail">
-              <input class="form__input" type="number" name="phone" placeholder="Ваш телефон">
+            <form class="contacts__form form" action="#" method="POST" enctype="multipart/form-data">
+              <!-- hidden fields -->
+              <input type="hidden" name="project_name" value="Site Name">
+              <input type="hidden" name="admin_email" value="admin@mail.com">
+              <input type="hidden" name="form_subject" value="Form Subject">
+
+              <!-- basic fields -->
+              <input class="form__input" type="mail" data-validate-field="email" name="email" placeholder="Ваш E-mail" required>
+              <input class="form__input" type="tel" data-validate-field="tel" name="phone" placeholder="Ваш телефон" required>
               <textarea class="form__textarea" placeholder="Сообщение"></textarea>
               <button class="form__btn" type="submit">
                 Отправить
@@ -364,7 +370,7 @@
     </footer>
 
   </div>
-
+  
   <script src="js/main.min.js"></script>
 </body>
 </html>
