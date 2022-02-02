@@ -10,7 +10,6 @@
   }
 
   &__description {
-    @include flexb();
     margin-bottom: 80px;
 
     @include maxw($md) {
