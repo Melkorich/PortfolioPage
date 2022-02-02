@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-<head> 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kirill Lavrov Personal web-page</title>
-  <link rel="icon" href="images/favicon.png">
-  <link rel="stylesheet" href="css/style.min.css">
-</head>
+<html lang="ru">
+  <head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirill Lavrov Personal web-page</title>
+    <link rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
 <body> 
   <div id="preloader" class="preloader"></div>
-
+  
   <div class="wrapper">
     <header class="header" id="header" style="background-image: url(images/header/header-bg.png);">
       
@@ -142,25 +142,25 @@
               </h3>
               <ul class="about__programs-list">
                 <li class="about__programs-item">
-                  <svg class="figma-icon" width="50" height="50px" >
+                  <svg class="figma-icon">
                     <use xlink:href=images/sprite.svg#figma></use>
                   </svg>
                   <span class="about__programs-name">Figma</span>
                 </li>
                 <li class="about__programs-item">
-                  <svg class="program-icon" width="50px" height="50px">
+                  <svg class="program-icon">
                     <use xlink:href=images/sprite.svg#photoshop></use>
                   </svg>
                   <span class="about__programs-name">Photoshop</span>
                 </li>
                 <li class="about__programs-item">
-                  <svg class="program-icon" width="50px" height="50px">
+                  <svg class="program-icon">
                     <use xlink:href=images/sprite.svg#avocode></use>
                   </svg>
                   <span class="about__programs-name">Avocode</span>
                 </li>
                 <li class="about__programs-item">
-                  <svg class="program-icon" width="50px" height="50px">
+                  <svg class="program-icon">
                     <use xlink:href=images/sprite.svg#sketch></use>
                   </svg>
                   <span class="about__programs-name">Sketch</span>
@@ -262,7 +262,7 @@
             </li>
           </ul>
 
-          <button class="portfolio__btn">
+          <button class="portfolio__btn view-more-btn">
             View more
           </button>
         </div>
@@ -276,7 +276,7 @@
           <div class="contacts__inner">
             <div class="contacts__info info">
               <h3 class="info__title">
-                Contacts:
+                Контакты:
               </h3> 
               <ul class="info__list">
                 <li class="info__item info__item--mail">
@@ -289,13 +289,20 @@
                   <a class="info__link" href="https://telegram.me/keshalavrov" target="_blank" aria-label="My telegram">@keshalavrov</a>
                 </li>
               </ul> 
-            </div>
-            <form class="contacts__form form" action="#">
-             <input class="form__input" type="email" name="mail" placeholder="Your E-mail">
-              <input class="form__input" type="number" name="phone" placeholder="Your phone">
-              <textarea class="form__textarea" placeholder="Message"></textarea>
+            </div> 
+
+            <form class="contacts__form form" action="mail.php" method="POST" enctype="multipart/form-data">
+              <!-- hidden fields -->
+              <input type="hidden" name="project_name" value="Kirill Page">
+              <input type="hidden" name="admin_email" value="kirill.lavrov92@gmail.com">
+              <input type="hidden" name="form_subject" value="Form Subject">
+
+              <!-- basic fields -->
+              <input class="form__input" type="mail" name="email" placeholder="Your E-mail" required>
+              <input class="form__input" type="tel" name="phone" placeholder="Your phone" required>
+              <textarea class="form__textarea" name="text" value="message" placeholder="Message"></textarea>
               <button class="form__btn" type="submit">
-                Send
+               Send
               </button>
             </form>
            
@@ -364,7 +371,7 @@
     </footer>
 
   </div>
-
+  
   <script src="js/main.min.js"></script>
 </body>
 </html>

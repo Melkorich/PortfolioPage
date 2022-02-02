@@ -22,7 +22,7 @@
                 RU
               </a>
               <span class="slash-sign">&#x0002F;</span>
-              <a class="header__btn-language btn-language--en" href="index-en.html">
+              <a class="header__btn-language btn-language--en" href="index-eng.html">
                 EN 
               </a>
             </div>
@@ -119,12 +119,12 @@
             Обо мне
           </h2>
           <div class="about__description">
-            <div class="about__image">
+            <!-- <div class="about__image">
               <picture>
                 <source type="image/webp" srcset="images/about/me2.webp">
                 <img class="about__img" src="images/about/me2.JPG" alt="Моя фотография раздел 'обо мне'">
               </picture>
-            </div>
+            </div> -->
             <div class="about__text">
               <p>
                 Меня зовут Кирилл Лавров. С 2021 года я занимаюсь веб разработкой. Делаю полностью адаптивные сайты, которые будут хорошо смотреться на любом из популярных браузеров. За свой недолгий, но, плодотворный опыт, я создавал лендинг-страницы, сайты визитки, а также работал над интернет-магазинами.
@@ -259,10 +259,10 @@
                   Для любителей кофе
                 </span>
               </a>
-            </li>
+            </li> 
           </ul>
 
-          <button class="portfolio__btn">
+          <button class="portfolio__btn view-more-btn">
             Смотреть еще
           </button>
         </div>
@@ -290,16 +290,16 @@
                 </li>
               </ul> 
             </div>
-            <form class="contacts__form form" action="#" method="POST" enctype="multipart/form-data">
+            <form class="contacts__form form" action="mail.php" method="POST" enctype="multipart/form-data">
               <!-- hidden fields -->
-              <input type="hidden" name="project_name" value="Site Name">
-              <input type="hidden" name="admin_email" value="admin@mail.com">
+              <input type="hidden" name="project_name" value="Kirill Page">
+              <input type="hidden" name="admin_email" value="kirill.lavrov92@gmail.com">
               <input type="hidden" name="form_subject" value="Form Subject">
 
               <!-- basic fields -->
-              <input class="form__input" type="mail" data-validate-field="email" name="email" placeholder="Ваш E-mail" required>
-              <input class="form__input" type="tel" data-validate-field="tel" name="phone" placeholder="Ваш телефон" required>
-              <textarea class="form__textarea" placeholder="Сообщение"></textarea>
+              <input class="form__input" type="mail" name="email" placeholder="Ваш E-mail" required>
+              <input class="form__input" type="tel" name="phone" placeholder="Ваш телефон" required>
+              <textarea class="form__textarea" name="text" value="message" placeholder="Сообщение"></textarea>
               <button class="form__btn" type="submit">
                 Отправить
               </button>

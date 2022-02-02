@@ -2,11 +2,11 @@ $(function(){
 
   //show more btn
   $('.portfolio__item').slice(0, 6).show();
-  $('.portfolio__btn').on('click', function() {
+  $('.view-more-btn').on('click', function() {
     $('.portfolio__item:hidden').slice(0, 3).slideDown();
 
     if ($('.portfolio__item:hidden').length == 0) {
-      $('.portfolio__btn').fadeOut('slow');
+      $('.view-more-btn').fadeOut('slow');
     }
   })
 
@@ -16,8 +16,6 @@ $(function(){
           $("html, body").animate({scrollTop: $(_href).offset().top+"px"}, 1000);
           return false;
   });
-
-  $('.wrapper').addClass('active');
 });
 
 //preloader
@@ -47,7 +45,7 @@ let im = new Inputmask("+7 (999) 999-99-99");
 im.mask(inputTel);
 
 
-$(document).ready(function() {
+$(function() {
 
 	//E-mail Ajax Send
 	$("form").submit(function() { //Change
