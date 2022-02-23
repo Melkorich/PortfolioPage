@@ -45,19 +45,19 @@ let im = new Inputmask("+7 (999) 999-99-99");
 im.mask(inputTel);
 
 
+
 $(function() {
 
 	//E-mail Ajax Send
-	$("form").submit(function() { //Change
+	$("form").submit(function() { 
 		var th = $(this);
 		$.ajax({
 			type: "POST",
-			url: "mail.php", //Change
+			url: "mail.php", 
 			data: th.serialize()
 		}).done(function() {
 			alert("Thank you!");
 			setTimeout(function() {
-				// Done Functions
 				th.trigger("reset");
 			}, 1000);
 		});
@@ -65,3 +65,5 @@ $(function() {
 	});
 
 });
+
+

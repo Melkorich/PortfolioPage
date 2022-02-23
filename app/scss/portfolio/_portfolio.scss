@@ -28,6 +28,8 @@
 
   &__item {
     display: none;
+    perspective: 1000px;
+    transform-style: preserve-3d;
   }
 
   &__link {
@@ -35,6 +37,7 @@
     position: relative;
     overflow: hidden;
     border-radius: 30px;
+    transition: transform 0.3s;
 
     &::before {
       position: absolute;
@@ -43,10 +46,9 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(21, 21, 21, 0.6);
-      backdrop-filter: blur(10px);
+      background-color: rgba(21, 21, 21, 0.3);
+      backdrop-filter: blur(5px);
       opacity: 0;
-      border-radius: 30px;
       transition: opacity 0.3s ease-in-out;
       z-index: 5;
 
@@ -60,7 +62,7 @@
         opacity: 1;
         bottom: 30px;
         visibility: visible;
-      }
+      } 
 
       &::before {
         opacity: 1;
