@@ -28,8 +28,6 @@
 
   &__item {
     display: none;
-    perspective: 1000px;
-    transform-style: preserve-3d;
   }
 
   &__link {
@@ -37,7 +35,7 @@
     position: relative;
     overflow: hidden;
     border-radius: 30px;
-    transition: transform 0.3s;
+    min-height: 241px;
 
     &::before {
       position: absolute;
@@ -110,6 +108,7 @@
         left: 0;
         width: 100%;
         height: 100%;
+        border-radius: 0 0 15px 15px;
         background-color: rgba(21, 21, 21, 0.4);
         backdrop-filter: blur(8px);
         z-index: -1;
