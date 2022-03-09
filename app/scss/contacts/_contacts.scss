@@ -11,6 +11,10 @@
 
   &__title {
     margin-bottom: 75px;
+
+    @include maxw($sm) {
+      margin-bottom: 20px;
+    }
   }
 
   &__inner {
