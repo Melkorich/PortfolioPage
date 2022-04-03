@@ -35,6 +35,12 @@ document.body.onload = function () {
       preloader.classList.add('hidden');
     }
   }, 600);
+
+  setTimeout(function() {
+    if(document.querySelector('.preloader').classList.contains('hidden')) {
+      document.querySelector('.preloader').style.display = 'none'
+    }
+  },2000)
 }
 
 //inputMask
